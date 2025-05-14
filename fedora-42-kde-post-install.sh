@@ -62,5 +62,11 @@ curl -o ~/.config/oh-my-posh/techjotters_conda.omp.json https://raw.githubuserco
 echo "⚡ Applying Oh My Posh config..."
 echo 'eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/techjotters_conda.omp.json)"' >> ~/.zshrc
 
+echo "🧩 Adding Flathub repository..."
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+echo "📦 Adding Terra repository..."
+sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release -y
+
 echo "🔁 Reloading Zsh configuration..."
 exec zsh
