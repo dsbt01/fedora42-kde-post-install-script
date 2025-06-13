@@ -14,7 +14,7 @@ git clone https://github.com/mahbub-research/fedora42-kde-post-install-script.gi
 ```
 
 ```
-git clone https://github.com/mahbub-research/fedora42-kde-post-install-script.git
+cd fedora42-kde-post-install-script
 
 chmod +x fedora-42-kde-post-install.sh
 
