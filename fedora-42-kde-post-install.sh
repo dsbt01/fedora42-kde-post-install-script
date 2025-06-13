@@ -67,5 +67,17 @@ sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 echo "📦 Adding Terra repository..."
 sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release -y
 
+echo "🎨 Installing Kvantum and Orchis KDE theme..."
+sudo dnf install kvantum -y
+cd ~
+git clone https://github.com/vinceliuice/Orchis-kde.git
+cd Orchis-kde
+./install.sh
+
+echo "🧹 Cleaning up theme and post-installation script folders..."
+cd ~
+rm -rf Orchis-kde
+rm -rf fedora42-kde-post-install-script
+
 echo "🔁 Reloading Zsh configuration..."
 exec zsh
