@@ -1,23 +1,33 @@
-# fedora42-kde-post-install-script
-Fedora 42 post installeion script
+# 🎉 Fedora 42 KDE Post-Install Script
 
-This script will help to install and configure the RPM Fusion repositories, install updates, installl zsh, configure add ons, install and configure oh my posh and install customized oh my pos theme.
+Automate your Fedora 42 KDE setup with a single script!  
+Get codecs, fonts, Zsh, plugins, Starship prompt, and more — fully configured.
 
+![Preview of the Setup](preview.png)
 
-## How to use?
-```
+---
+
+## 🚀 What This Script Does
+
+- 🔄 Updates system packages
+- 📦 Enables RPM Fusion (Free & Non-Free)
+- 🎞 Installs OpenH264 & replaces `ffmpeg-free` with full `ffmpeg`
+- 🎶 Sets up multimedia group (without weak dependencies)
+- ⚙️ Installs Git & Zsh, sets Zsh as default shell
+- 💡 Adds essential Zsh plugins: autosuggestions, syntax highlighting, completions
+- 🔤 Installs Fira Code Nerd Font
+- 🚀 Installs Starship prompt with Catppuccin Powerline theme
+- 🧩 Adds Flathub and Terra repositories
+
+---
+
+## 🛠️ How to Use
+
+```bash
 sudo dnf install git -y
-```
-
-```
 git clone https://github.com/mahbub-research/fedora42-kde-post-install-script.git
-```
-
-```
 cd fedora42-kde-post-install-script
-
 chmod +x fedora-42-kde-post-install.sh
-
 ./fedora-42-kde-post-install.sh
-```
+
 
