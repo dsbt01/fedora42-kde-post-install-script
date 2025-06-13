@@ -52,15 +52,14 @@ wget -O ~/.local/share/fonts/FiraCode.zip https://github.com/ryanoasis/nerd-font
 unzip -o ~/.local/share/fonts/FiraCode.zip -d ~/.local/share/fonts/FiraCode
 fc-cache -fv
 
-echo "🌈 Installing Oh My Posh..."
-curl -s https://ohmyposh.dev/install.sh | bash -s
+echo "🚀 Installing Starship prompt..."
+curl -sS https://starship.rs/install.sh | sh -s -- -y
 
-echo "🎨 Downloading TechJotters Oh My Posh theme..."
-mkdir -p ~/.config/oh-my-posh
-curl -o ~/.config/oh-my-posh/techjotters_conda.omp.json https://raw.githubusercontent.com/mahbub-research/techjotters-ohmyposh-theme/main/techjotters_conda.omp.json
+echo "🎨 Applying Catppuccin Powerline Starship preset..."
+mkdir -p ~/.config
+starship preset catppuccin-powerline -o ~/.config/starship.toml
 
-echo "⚡ Applying Oh My Posh config..."
-echo 'eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/techjotters_conda.omp.json)"' >> ~/.zshrc
+echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 
 echo "🧩 Adding Flathub repository..."
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
