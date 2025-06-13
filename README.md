@@ -1,28 +1,25 @@
-# 🎉 Fedora 42 KDE Post-Install Script
+# Fedora 42 KDE Post-Installation Script 🚀
 
-Automate your Fedora 42 KDE setup with a single script!  
-Get codecs, fonts, Zsh, plugins, Starship prompt, and more — fully configured.
-
-
-![preview](https://github.com/user-attachments/assets/9a4468b6-69bc-415f-b1b7-6410b5d6319d)
+This script automates the setup of a modern, beautiful, and developer-ready Fedora 42 KDE desktop environment.
 
 ---
 
-## 🚀 What This Script Does
+## 📋 Features
 
-- 🔄 Updates system packages
-- 📦 Enables RPM Fusion (Free & Non-Free)
-- 🎞 Installs OpenH264 & replaces `ffmpeg-free` with full `ffmpeg`
-- 🎶 Sets up multimedia group (without weak dependencies)
-- ⚙️ Installs Git & Zsh, sets Zsh as default shell
-- 💡 Adds essential Zsh plugins: autosuggestions, syntax highlighting, completions
-- 🔤 Installs Fira Code Nerd Font
-- 🚀 Installs Starship prompt with Catppuccin Powerline theme
-- 🧩 Adds Flathub and Terra repositories
+- System update and RPM Fusion setup  
+- Multimedia codec fixes (OpenH264, full `ffmpeg`)  
+- Git and Zsh installation with powerful plugins  
+- FiraCode Nerd Font installation  
+- **Starship prompt** with **Catppuccin Powerline preset**  
+- **Kvantum** and **Orchis KDE theme** for modern UI  
+- Flatpak and Terra repo support  
+- Final cleanup for a tidy system  
 
 ---
 
 ## 🛠️ How to Use
+
+### 1. Clone the repo and run the script
 
 ```bash
 sudo dnf install git -y
@@ -30,5 +27,6 @@ git clone https://github.com/mahbub-research/fedora42-kde-post-install-script.gi
 cd fedora42-kde-post-install-script
 chmod +x fedora-42-kde-post-install.sh
 ./fedora-42-kde-post-install.sh
+
 
 
