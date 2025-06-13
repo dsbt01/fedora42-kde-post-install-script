@@ -3,7 +3,8 @@
 Automate your Fedora 42 KDE setup with a single script!  
 Get codecs, fonts, Zsh, plugins, Starship prompt, and more — fully configured.
 
-![Preview of the Setup](preview.png)
+
+![preview](https://github.com/user-attachments/assets/9a4468b6-69bc-415f-b1b7-6410b5d6319d)
 
 ---
 
