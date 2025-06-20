@@ -22,8 +22,9 @@ This script automates the setup of a **modern**, **beautiful**, and **developer-
 
 Copy and run this in your terminal:
 
-```bash
 # 🛠️ Run Fedora 42 KDE Post-Install Script
+```bash
+sudo dnf install git -y
 git clone https://github.com/mahbub-research/fedora42-kde-post-install-script.git
 cd fedora42-kde-post-install-script
 chmod +x fedora-42-kde-post-install.sh
