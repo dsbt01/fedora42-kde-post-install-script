@@ -73,14 +73,19 @@ git clone https://github.com/vinceliuice/Orchis-kde.git
 cd Orchis-kde
 ./install.sh
 
-echo "🎨 Installing Tela Icon Theme..."
+echo "🎨 Installing Tela Icon Theme system-wide..."
 cd ~
 git clone https://github.com/vinceliuice/Tela-icon-theme.git
 cd Tela-icon-theme
-./install.sh -d ~/.icons
 
-echo "🧹 Cleaning up temporary folders..."
+# Install system-wide to /usr/share/icons
+sudo ./install.sh -d /usr/share/icons
+
+# Rebuild KDE appearance cache
+kbuildsycoca5
+
 cd ~
+echo "🧹 Cleaning up temporary folders..."
 rm -rf Orchis-kde
 rm -rf Tela-icon-theme
 rm -rf fedora42-kde-post-install-script
