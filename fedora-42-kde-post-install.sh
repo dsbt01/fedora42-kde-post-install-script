@@ -58,7 +58,6 @@ curl -sS https://starship.rs/install.sh | sh -s -- -y
 echo "🎨 Applying Catppuccin Powerline Starship preset..."
 mkdir -p ~/.config
 starship preset catppuccin-powerline -o ~/.config/starship.toml
-
 echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 
 echo "🧩 Adding Flathub repository..."
@@ -74,9 +73,16 @@ git clone https://github.com/vinceliuice/Orchis-kde.git
 cd Orchis-kde
 ./install.sh
 
-echo "🧹 Cleaning up theme and post-installation script folders..."
+echo "🎨 Installing Tela Icon Theme..."
+cd ~
+git clone https://github.com/vinceliuice/Tela-icon-theme.git
+cd Tela-icon-theme
+./install.sh -d ~/.icons
+
+echo "🧹 Cleaning up temporary folders..."
 cd ~
 rm -rf Orchis-kde
+rm -rf Tela-icon-theme
 rm -rf fedora42-kde-post-install-script
 
 echo "🔁 Reloading Zsh configuration..."
