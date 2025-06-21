@@ -81,16 +81,15 @@ cd Tela-icon-theme
 # Install system-wide to /usr/share/icons
 sudo ./install.sh -d /usr/share/icons
 
-
-# Rebuild KDE appearance cache
-kbuildsycoca5
-
 # Install Kora icons
 sudo dnf install kora-icon-theme -y
 
 # This sets Kora as the default icon theme for the current user
 lookandfeeltool -a org.kde.breezedark.desktop  # (optional: set a matching look and feel)
 kwriteconfig5 --file ~/.config/kdeglobals --group Icons --key Theme kora
+
+# Rebuild KDE appearance cache
+kbuildsycoca5
 
 cd ~
 echo "🧹 Cleaning up temporary folders..."
